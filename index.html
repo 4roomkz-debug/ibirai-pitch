@@ -666,8 +666,8 @@
         }
 
         .team-avatar {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
             border-radius: 50%;
             display: flex;
@@ -677,6 +677,13 @@
             font-weight: 700;
             margin: 0 auto 20px;
             box-shadow: 0 10px 30px var(--teal-glow);
+            overflow: hidden;
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-name {
@@ -819,7 +826,9 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">ibirAi</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="ibirAi" style="height: 40px;" onerror="this.style.display='none'; this.parentElement.innerHTML='ibirAi';">
+            </div>
             <ul class="nav-links">
                 <li><a href="#problem">Проблема</a></li>
                 <li><a href="#solution">Решение</a></li>
@@ -996,7 +1005,9 @@
             </div>
             <div class="team-grid">
                 <div class="team-card fade-in">
-                    <div class="team-avatar">ГА</div>
+                    <div class="team-avatar">
+                        <img src="images/gani.jpg" alt="Гани Абадан" onerror="this.style.display='none'; this.parentElement.innerHTML='ГА';">
+                    </div>
                     <div class="team-name">Гани Абадан</div>
                     <div class="team-role">CEO, основатель</div>
                     <div class="team-exp">
@@ -1006,7 +1017,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-avatar">ЖТ</div>
+                    <div class="team-avatar">
+                        <img src="images/zholdas.jpg" alt="Жолдасбек Темиргалиев" onerror="this.style.display='none'; this.parentElement.innerHTML='ЖТ';">
+                    </div>
                     <div class="team-name">Жолдасбек Темиргалиев</div>
                     <div class="team-role">CTO</div>
                     <div class="team-exp">
@@ -1016,7 +1029,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-avatar">ИИ</div>
+                    <div class="team-avatar">
+                        <img src="images/indira.png" alt="Индира Исламбек" onerror="this.style.display='none'; this.parentElement.innerHTML='ИИ';">
+                    </div>
                     <div class="team-name">Индира Исламбек</div>
                     <div class="team-role">Sales Manager</div>
                     <div class="team-exp">
