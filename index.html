@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ibir.ai — Микрообучение для корпораций</title>
+    <title>ibirAi — Микрообучение для корпораций</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -463,22 +463,28 @@
         .solution-step {
             display: flex;
             gap: 24px;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             position: relative;
+            padding-left: 60px;
         }
 
         @media (min-width: 768px) {
             .solution-step {
-                justify-content: center;
+                justify-content: space-between;
+                padding-left: 0;
+            }
+
+            .solution-step:nth-child(odd) {
+                flex-direction: row-reverse;
             }
 
             .solution-step:nth-child(odd) .step-content {
                 text-align: right;
-                margin-right: 80px;
+                padding-right: 60px;
             }
 
             .solution-step:nth-child(even) .step-content {
-                margin-left: 80px;
+                padding-left: 60px;
             }
         }
 
@@ -494,12 +500,13 @@
             font-weight: 700;
             font-size: 1.2rem;
             box-shadow: 0 0 20px var(--teal-glow);
-            z-index: 1;
+            z-index: 2;
+            position: absolute;
+            left: 0;
         }
 
         @media (min-width: 768px) {
             .step-number {
-                position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -507,7 +514,7 @@
 
         .step-content {
             flex: 1;
-            max-width: 350px;
+            max-width: 400px;
         }
 
         .step-content h3 {
@@ -812,7 +819,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">ibir.ai</div>
+            <div class="logo">ibirAi</div>
             <ul class="nav-links">
                 <li><a href="#problem">Проблема</a></li>
                 <li><a href="#solution">Решение</a></li>
@@ -902,7 +909,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">Решение</div>
-                <h2 class="section-title">ibir.ai — обучение там, где сотрудники</h2>
+                <h2 class="section-title">ibirAi — обучение там, где сотрудники</h2>
                 <p class="section-subtitle">Превращаем корпоративные знания в привычку за 3 минуты в день</p>
             </div>
             <div class="solution-timeline">
@@ -1037,7 +1044,7 @@
                     </a>
                 </div>
                 <div class="contact-info">
-                    <p>Гани Абадан • <a href="tel:+77019188838">+7 701 918 88 38</a> • <a href="mailto:g.abadan@ibirai.com">g.abadan@ibirai.com</a></p>
+                    <p>Гани Абадан • <a href="tel:+77019188838">+7 701 918 88 38</a> • <a href="mailto:abadangani@gmail.com">abadangani@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -1045,7 +1052,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 ibir.ai • Алматы, Казахстан</p>
+            <p>© 2025 ibirAi • Алматы, Казахстан</p>
         </div>
     </footer>
 
