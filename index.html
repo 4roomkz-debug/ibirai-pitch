@@ -9,8 +9,8 @@
     <!-- OpenGraph -->
     <meta property="og:title" content="ibirAi — Микрообучение для корпораций">
     <meta property="og:description" content="AI превращает базу знаний компании в ежедневные 3-минутные уроки с 95% вовлечённостью. Seed-раунд Q1 2026.">
-    <meta property="og:image" content="https://ibirai-pitch.vercel.app/images/лого.jpg">
-    <meta property="og:url" content="https://ibirai-pitch.vercel.app">
+    <meta property="og:image" content="https://ibirai.abadan.kz/images/лого.jpg">
+    <meta property="og:url" content="https://ibirai.abadan.kz">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
 
@@ -18,7 +18,40 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ibirAi — Микрообучение для корпораций">
     <meta name="twitter:description" content="AI превращает базу знаний компании в ежедневные 3-минутные уроки с 95% вовлечённостью.">
-    <meta name="twitter:image" content="https://ibirai-pitch.vercel.app/images/лого.jpg">
+    <meta name="twitter:image" content="https://ibirai.abadan.kz/images/лого.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ibirAi",
+        "url": "https://ibirai.abadan.kz",
+        "logo": "https://ibirai.abadan.kz/images/лого.jpg",
+        "description": "AI-платформа корпоративного микрообучения через Telegram",
+        "foundingDate": "2024",
+        "founders": [{
+            "@type": "Person",
+            "name": "Гани Абадан",
+            "jobTitle": "CEO"
+        }],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Алматы",
+            "addressCountry": "KZ"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+7-701-918-88-38",
+            "contactType": "sales",
+            "email": "abadangani@gmail.com"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/ganiabadan/",
+            "https://t.me/Gani_Abadan"
+        ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -448,6 +481,51 @@
             font-size: 1rem;
         }
 
+        /* Video Demo Section */
+        .demo-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(240, 187, 30, 0.05) 50%, transparent 100%);
+        }
+
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-placeholder {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .video-placeholder iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 18px;
+        }
+
+        .video-coming-soon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .video-coming-soon .play-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
         /* Solution Section */
         .solution-section {
             background: linear-gradient(180deg, transparent 0%, rgba(0, 118, 125, 0.05) 50%, transparent 100%);
@@ -635,6 +713,343 @@
             font-size: 1.2rem;
         }
 
+        /* Testimonial */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(240, 187, 30, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 48px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
+            padding-left: 40px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-left: 40px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Pipeline info */
+        .pipeline-info {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .pipeline-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .pipeline-item .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .pipeline-item .dot.teal {
+            background: var(--teal-light);
+        }
+
+        /* Roadmap Section */
+        .roadmap-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 118, 125, 0.05) 50%, transparent 100%);
+        }
+
+        .roadmap-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 100%);
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-timeline {
+                flex-direction: column;
+                gap: 32px;
+            }
+            .roadmap-timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 24px;
+                right: auto;
+                width: 3px;
+                height: auto;
+            }
+        }
+
+        .roadmap-item {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-item {
+                text-align: left;
+                padding-left: 60px;
+            }
+        }
+
+        .roadmap-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--teal);
+            border-radius: 50%;
+            margin: 30px auto 16px;
+            box-shadow: 0 0 20px var(--teal-glow);
+        }
+
+        .roadmap-item.current .roadmap-dot {
+            background: var(--gold);
+            box-shadow: 0 0 20px var(--gold-glow);
+            width: 28px;
+            height: 28px;
+            margin-top: 26px;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-dot {
+                position: absolute;
+                left: 15px;
+                top: 0;
+                margin: 0;
+            }
+            .roadmap-item.current .roadmap-dot {
+                left: 11px;
+            }
+        }
+
+        .roadmap-date {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .roadmap-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .roadmap-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Competitors Section */
+        .competitors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .competitors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .competitor-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .competitor-card.featured {
+            border-color: var(--gold);
+            background: rgba(240, 187, 30, 0.05);
+        }
+
+        .competitor-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .competitor-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 16px;
+            min-height: 60px;
+        }
+
+        .competitor-cons {
+            font-size: 0.85rem;
+            color: #EF4444;
+        }
+
+        .competitor-card.featured .competitor-cons {
+            color: var(--gold);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: linear-gradient(180deg, rgba(0, 118, 125, 0.05) 0%, transparent 100%);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--gold);
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge-icon {
+            font-size: 1.2rem;
+        }
+
+        /* LinkedIn button in team */
+        .team-social {
+            margin-top: 16px;
+        }
+
+        .team-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(10, 102, 194, 0.2);
+            border: 1px solid rgba(10, 102, 194, 0.4);
+            border-radius: 8px;
+            color: #0A66C2;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .team-social a:hover {
+            background: rgba(10, 102, 194, 0.3);
+            border-color: #0A66C2;
+        }
+
+        /* Calendly button */
+        .btn-calendly {
+            background: linear-gradient(135deg, #006BFF 0%, #0057D4 100%);
+            color: white;
+        }
+
+        .btn-calendly:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 107, 255, 0.3);
+        }
+
         /* Team Section */
         .team-grid {
             display: grid;
@@ -720,6 +1135,173 @@
             line-height: 1.6;
         }
 
+        /* Business Model Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: rgba(240, 187, 30, 0.05);
+        }
+
+        .pricing-tier {
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .pricing-unit {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 16px;
+        }
+
+        .pricing-users {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* The Ask Section */
+        .ask-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, rgba(0, 118, 125, 0.1) 0%, transparent 100%);
+        }
+
+        .ask-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .ask-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .ask-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .ask-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 12px;
+        }
+
+        .ask-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .ask-details {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        .use-of-funds {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .fund-item {
+            background: rgba(0, 118, 125, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* NPS Comparison */
+        .nps-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nps-item {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .nps-logo {
+            height: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nps-logo img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nps-logo span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .nps-score {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .nps-score.highlight {
+            color: var(--gold);
+            font-size: 2.5rem;
+        }
+
+        .nps-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 4px;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 120px 0;
@@ -742,6 +1324,37 @@
         .cta-content {
             position: relative;
             z-index: 1;
+        }
+
+        .cta-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .cta-avatar {
+            flex-shrink: 0;
+        }
+
+        .cta-avatar img {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(0, 118, 125, 0.3);
+            border: 3px solid var(--teal);
+        }
+
+        @media (max-width: 768px) {
+            .cta-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .cta-avatar img {
+                width: 120px;
+                height: 120px;
+            }
         }
 
         .cta-title {
@@ -894,6 +1507,28 @@
         </div>
     </div>
 
+    <!-- Video Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Демо</div>
+                <h2 class="section-title">Как это работает</h2>
+                <p class="section-subtitle">Посмотрите, как сотрудники получают микроуроки прямо в Telegram</p>
+            </div>
+            <div class="demo-container fade-in">
+                <div class="video-placeholder">
+                    <!-- Замените YOUR_VIDEO_ID на ID вашего YouTube/Loom видео -->
+                    <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+                    <div class="video-coming-soon">
+                        <div class="play-icon">▶️</div>
+                        <p>Видео-демо скоро будет здесь</p>
+                        <p style="font-size: 0.85rem; margin-top: 8px;">Свяжитесь с нами для живой демонстрации</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Problem Section -->
     <section class="problem-section" id="problem">
         <div class="container">
@@ -975,6 +1610,33 @@
         </div>
     </section>
 
+    <!-- Competitors Section -->
+    <section id="competitors">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Рынок</div>
+                <h2 class="section-title">Почему не существующие решения?</h2>
+            </div>
+            <div class="competitors-grid">
+                <div class="competitor-card fade-in">
+                    <div class="competitor-name">LMS-системы</div>
+                    <div class="competitor-desc">Moodle, iSpring, SAP SuccessFactors</div>
+                    <div class="competitor-cons">20-30% вовлечённость, сложный интерфейс, требуют отдельного входа</div>
+                </div>
+                <div class="competitor-card fade-in">
+                    <div class="competitor-name">Микрообучение</div>
+                    <div class="competitor-desc">Axonify, EdApp, 7taps</div>
+                    <div class="competitor-cons">Отдельное приложение, высокий порог входа для сотрудников</div>
+                </div>
+                <div class="competitor-card featured fade-in">
+                    <div class="competitor-name">ibirAi</div>
+                    <div class="competitor-desc">Микроуроки в Telegram с AI-генерацией</div>
+                    <div class="competitor-cons">95% вовлечённость, 0 барьеров входа, автоматизация контента</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Traction Section -->
     <section class="traction-section" id="traction">
         <div class="container">
@@ -984,7 +1646,17 @@
             </div>
             <div class="client-showcase fade-in">
                 <div class="client-logo">Polpharma Santo</div>
-                <div class="client-details">117 менеджеров • 3 страны • 12 недель</div>
+                <div class="client-details">Фармацевтический холдинг • 117 менеджеров • 3 страны • 12 недель</div>
+                <div class="pipeline-info">
+                    <div class="pipeline-item">
+                        <span class="dot"></span>
+                        <span>Платящий клиент</span>
+                    </div>
+                    <div class="pipeline-item">
+                        <span class="dot teal"></span>
+                        <span>2+ компании в переговорах</span>
+                    </div>
+                </div>
             </div>
             <div class="metrics-grid">
                 <div class="metric-card fade-in">
@@ -992,20 +1664,57 @@
                     <div class="metric-label">Вовлечённость на старте</div>
                 </div>
                 <div class="metric-card fade-in">
-                    <div class="metric-value">80%+</div>
-                    <div class="metric-label">Дошли до финала</div>
+                    <div class="metric-value">82%</div>
+                    <div class="metric-label">Завершаемость курса</div>
                 </div>
                 <div class="metric-card fade-in">
-                    <div class="metric-value">100%</div>
-                    <div class="metric-label">Применили на практике</div>
+                    <div class="metric-value">57.8</div>
+                    <div class="metric-label">NPS (отлично: 50+)</div>
                 </div>
                 <div class="metric-card fade-in">
                     <div class="metric-value">8.4/10</div>
-                    <div class="metric-label">Оценка AI-аватара</div>
+                    <div class="metric-label">CSAT</div>
                 </div>
             </div>
             <div class="comparison-box fade-in">
                 <strong>vs индустрия: 20-30% вовлечённость в онлайн-курсах</strong>
+            </div>
+
+            <!-- NPS Comparison -->
+            <div class="nps-comparison fade-in">
+                <div class="nps-item">
+                    <div class="nps-logo"><span>Средний EdTech</span></div>
+                    <div class="nps-score">30-40</div>
+                    <div class="nps-label">NPS</div>
+                </div>
+                <div class="nps-item">
+                    <div class="nps-logo">
+                        <img src="images/duolingo.png" alt="Duolingo" loading="lazy">
+                    </div>
+                    <div class="nps-score">~50</div>
+                    <div class="nps-label">NPS</div>
+                </div>
+                <div class="nps-item">
+                    <div class="nps-logo"><span style="color: var(--gold); font-weight: 700;">ibirAi</span></div>
+                    <div class="nps-score highlight">57.8</div>
+                    <div class="nps-label">NPS</div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-quote">
+                    Мы перепробовали множество LMS-систем, но вовлечённость всегда падала до 20-30%.
+                    С ibirAi за первую неделю получили 95% участия — менеджеры сами просят новые уроки.
+                    Это первый инструмент обучения, который реально работает.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">HR</div>
+                    <div class="testimonial-info">
+                        <h4>HR Director</h4>
+                        <p>Polpharma Santo, Центральная Азия</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1020,19 +1729,24 @@
             <div class="team-grid">
                 <div class="team-card fade-in">
                     <div class="team-avatar">
-                        <img src="images/gani.jpg" alt="Гани Абадан" onerror="this.style.display='none'; this.parentElement.innerHTML='ГА';">
+                        <img src="images/gani.jpg" alt="Гани Абадан" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='ГА';">
                     </div>
                     <div class="team-name">Гани Абадан</div>
                     <div class="team-role">CEO, основатель</div>
                     <div class="team-exp">
-                        10 лет в корпоративном обучении<br>
+                        15+ лет в корпоративном обучении<br>
                         14,000+ обученных сотрудников<br>
                         Автор книги «Бизнес по любви»
+                    </div>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/ganiabadan/" target="_blank" rel="noopener">
+                            <span>in</span> LinkedIn
+                        </a>
                     </div>
                 </div>
                 <div class="team-card fade-in">
                     <div class="team-avatar">
-                        <img src="images/zholdas.jpg" alt="Жолдасбек Темиргалиев" onerror="this.style.display='none'; this.parentElement.innerHTML='ЖТ';">
+                        <img src="images/zholdas.jpg" alt="Жолдасбек Темиргалиев" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='ЖТ';">
                     </div>
                     <div class="team-name">Жолдасбек Темиргалиев</div>
                     <div class="team-role">CTO</div>
@@ -1044,7 +1758,7 @@
                 </div>
                 <div class="team-card fade-in">
                     <div class="team-avatar">
-                        <img src="images/indira.png" alt="Индира Исламбек" onerror="this.style.display='none'; this.parentElement.innerHTML='ИИ';">
+                        <img src="images/indira.png" alt="Индира Исламбек" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='ИИ';">
                     </div>
                     <div class="team-name">Индира Исламбек</div>
                     <div class="team-role">Sales Manager</div>
@@ -1058,22 +1772,170 @@
         </div>
     </section>
 
+    <!-- Business Model Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Бизнес-модель</div>
+                <h2 class="section-title">B2B SaaS подписка</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-price">$30</div>
+                    <div class="pricing-unit">user/месяц</div>
+                    <div class="pricing-users">≤200 сотрудников</div>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-tier">Growth</div>
+                    <div class="pricing-price">$25</div>
+                    <div class="pricing-unit">user/месяц</div>
+                    <div class="pricing-users">201–1499 сотрудников</div>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-tier">Enterprise</div>
+                    <div class="pricing-price">$15</div>
+                    <div class="pricing-unit">user/месяц</div>
+                    <div class="pricing-users">1500+ сотрудников</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Roadmap</div>
+                <h2 class="section-title">План развития</h2>
+            </div>
+            <div class="roadmap-timeline fade-in">
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-date">Q4 2024</div>
+                    <div class="roadmap-title">Пилот</div>
+                    <div class="roadmap-desc">Первый платящий клиент</div>
+                </div>
+                <div class="roadmap-item current">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-date">Q1 2025</div>
+                    <div class="roadmap-title">Сейчас</div>
+                    <div class="roadmap-desc">$4.9k MRR, 2+ в переговорах</div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-date">Q1 2026</div>
+                    <div class="roadmap-title">Seed-раунд</div>
+                    <div class="roadmap-desc">$300k привлечение</div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-date">Q1 2027</div>
+                    <div class="roadmap-title">Цель</div>
+                    <div class="roadmap-desc">$3-4M ARR, безубыточность</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Ask Section -->
+    <section class="ask-section" id="ask">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Раунд</div>
+                <h2 class="section-title">Seed Q1 2026</h2>
+            </div>
+            <div class="ask-grid">
+                <div class="ask-box fade-in">
+                    <div class="ask-label">Привлекаем</div>
+                    <div class="ask-value">$300k</div>
+                    <div class="ask-details">Безубыточность: 12 месяцев</div>
+                    <div class="use-of-funds">
+                        <span class="fund-item">Разработка 30%</span>
+                        <span class="fund-item">Продажи 70%</span>
+                    </div>
+                </div>
+                <div class="ask-box fade-in">
+                    <div class="ask-label">Цель ARR</div>
+                    <div class="ask-value">$3-4M</div>
+                    <div class="ask-details">
+                        MRR сейчас: $4.9k<br>
+                        Воронка: 2 компании в переговорах
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Частые вопросы инвесторов</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Почему Telegram, а не своё приложение?</div>
+                    <div class="faq-answer">Telegram уже установлен у 95% сотрудников в СНГ. Нулевой барьер входа = максимальная вовлечённость. Свой app требует скачивания, регистрации и создаёт трение.</div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Как масштабируется AI-генерация?</div>
+                    <div class="faq-answer">Используем GPT-4 + собственные промпты для генерации уроков. Один оператор может обслуживать 10+ клиентов. Себестоимость генерации — $0.5-1 за урок.</div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Что если Telegram заблокируют?</div>
+                    <div class="faq-answer">Архитектура позволяет подключить WhatsApp, Slack, MS Teams за 2-4 недели. Telegram — стартовая точка для СНГ рынка, не единственный канал.</div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Юнит-экономика?</div>
+                    <div class="faq-answer">CAC: ~$500 (через LinkedIn outreach). LTV при 12 мес. контракте: $3,600-7,200. LTV/CAC = 7-14x. Gross margin: 80%+.</div>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges fade-in">
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">🔒</span>
+                    <span>Данные на серверах в Казахстане</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✅</span>
+                    <span>Official Telegram API</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">🛡️</span>
+                    <span>Шифрование данных</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">📋</span>
+                    <span>NDA с клиентами</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Готовы к разговору</h2>
-                <p class="cta-subtitle">Покажем демо, познакомим с клиентом, обсудим раунд</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/77019188838" class="btn btn-primary">
-                        💬 WhatsApp
-                    </a>
-                    <a href="https://t.me/ganiabadan" class="btn btn-secondary">
-                        ✈️ Telegram
-                    </a>
+            <div class="cta-wrapper">
+                <div class="cta-avatar fade-in">
+                    <img src="images/лого.jpg" alt="ibirAi">
                 </div>
-                <div class="contact-info">
-                    <p>Гани Абадан • <a href="tel:+77019188838">+7 701 918 88 38</a> • <a href="mailto:abadangani@gmail.com">abadangani@gmail.com</a></p>
+                <div class="cta-content">
+                    <h2 class="cta-title">Готовы к разговору</h2>
+                    <p class="cta-subtitle">Покажем демо, познакомим с клиентом, обсудим раунд</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/77019188838" class="btn btn-primary">
+                            💬 WhatsApp
+                        </a>
+                        <a href="https://t.me/Gani_Abadan" class="btn btn-secondary">
+                            ✈️ Telegram
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Гани Абадан • <a href="tel:+77019188838">+7 701 918 88 38</a> • <a href="mailto:abadangani@gmail.com">abadangani@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1082,6 +1944,11 @@
     <footer>
         <div class="container">
             <p>© 2025 ibirAi • Алматы, Казахстан</p>
+            <p style="margin-top: 12px;">
+                <a href="qoldau.html" style="color: var(--gold); text-decoration: none; font-size: 0.85rem;">
+                    🏆 Участник Business Qoldau 2025
+                </a>
+            </p>
         </div>
     </footer>
 
