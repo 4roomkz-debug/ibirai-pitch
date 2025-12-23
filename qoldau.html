@@ -208,17 +208,21 @@
         /* Feature Cards */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
             max-width: 1000px;
-            margin-top: 32px;
+            margin-top: 20px;
+        }
+
+        .features-grid.two-cols {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .feature-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: 12px;
+            padding: 16px;
             text-align: center;
         }
 
@@ -228,18 +232,18 @@
         }
 
         .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.8rem;
             margin-bottom: 8px;
         }
 
-        .feature-desc {
+        .feature-title {
             font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
@@ -288,31 +292,32 @@
         /* Results List */
         .results-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
             max-width: 900px;
-            margin-top: 32px;
+            margin-top: 24px;
         }
 
         .result-item {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 10px;
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px 20px;
+            border-radius: 10px;
+            padding: 12px 14px;
         }
 
         .result-number {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--gold);
-            min-width: 80px;
+            min-width: 50px;
         }
 
         .result-text {
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.9);
+            line-height: 1.2;
         }
 
         /* Navigation Dots */
@@ -435,7 +440,7 @@
             }
 
             .results-list {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .nav-arrows {
@@ -523,28 +528,38 @@
         <div class="slide" data-slide="3">
             <div class="slide-tag" style="background: rgba(0, 175, 202, 0.2); border-color: #00AFCA; color: #00AFCA;">⭐ Әлеуметтік маңыздылық</div>
             <h1 class="slide-title">
-                Обучение на <span class="kz-highlight">қазақ тілінде</span>
+                <span class="kz-highlight">Қазақ тілінде</span> оқыту
             </h1>
             <div class="features-grid">
                 <div class="feature-card gold">
                     <div class="feature-icon">🇰🇿</div>
-                    <div class="feature-title">Казахский язык</div>
-                    <div class="feature-desc">50 курсов на государственном языке</div>
+                    <div class="feature-title">Қазақ тілі</div>
+                    <div class="feature-desc">50 курсов на мемлекеттік тілде</div>
                 </div>
                 <div class="feature-card gold">
                     <div class="feature-icon">🌍</div>
-                    <div class="feature-title">Регионы</div>
-                    <div class="feature-desc">Доступно через Telegram — без офиса</div>
+                    <div class="feature-title">Аймақтар</div>
+                    <div class="feature-desc">Telegram арқылы — кез келген жерде</div>
                 </div>
                 <div class="feature-card gold">
                     <div class="feature-icon">⏰</div>
-                    <div class="feature-title">Без отрыва</div>
-                    <div class="feature-desc">3 минуты в день — на рабочем месте</div>
+                    <div class="feature-title">Жұмыстан қол үзбей</div>
+                    <div class="feature-desc">Күніне 3 минут — жұмыс орнында</div>
                 </div>
                 <div class="feature-card gold">
                     <div class="feature-icon">🏢</div>
-                    <div class="feature-title">50 МСБ</div>
-                    <div class="feature-desc">Бесплатный доступ для малого бизнеса</div>
+                    <div class="feature-title">50 ШОБ</div>
+                    <div class="feature-desc">Шағын бизнеске тегін қол жетімділік</div>
+                </div>
+                <div class="feature-card gold">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-title">500 қызметкер</div>
+                    <div class="feature-desc">Грант арқылы оқытамыз</div>
+                </div>
+                <div class="feature-card gold">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Дағды дамыту</div>
+                    <div class="feature-desc">90% қызметкерлер дағдыларын қолданады</div>
                 </div>
             </div>
         </div>
@@ -611,7 +626,7 @@
                     <div class="result-text">клиента — безубыточность</div>
                 </div>
             </div>
-            <p style="margin-top: 48px; font-size: 1.3rem; color: var(--gold); font-weight: 600;">
+            <p style="margin-top: 32px; font-size: 1.2rem; color: var(--gold); font-weight: 600;">
                 Рахмет! 🙏
             </p>
         </div>
